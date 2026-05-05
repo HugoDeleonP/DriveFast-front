@@ -1,65 +1,62 @@
 import Image from "next/image";
+import NavBar from "@/components/Navbar";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <section className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-[#1F1f1f] 
+      gap-10">
+      
+      <NavBar/>
+      
+      <main className="flex flex-1 flex-col items-center gap-[5rem] sm:items-start">
+        
+        <div className="flex flex-col gap-[2rem]">
+
+          <h2 className="text-[2rem] font-semibold
+            ">Descrição</h2>
+
+          <div className="rounded-sm bg-white p-[2rem] max-w-[50vw]
+          flex flex-col gap-[1rem]
+          text-black">
+            <p>
+              DriveFast é uma aplicação front-end utilizando Next.js para
+            consumir a API DriveFast, criada na atividade de backend.
+            </p>
+
+            <p>
+              O objetivo não é criar um sistema completo com todas as funcionalidades possíveis, mas
+            sim construir uma primeira versão funcional da interface, integrando o front-end com os
+            principais recursos da API.
+            </p>
+
+            <p>
+              A API DriveFast possui recursos para gerenciamento de clientes, veículos e locações,
+            além de regras como cálculo automático do valor total da locação e alteração da
+            disponibilidade do veículo.
+            </p>
+          </div>
+
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="flex flex-col gap-[2rem] w-[100%]">
+
+          <h2 className="text-[2rem] font-semibold
+            ">Funcionalidades</h2>
+
+          <div className=" max-w-[50vw]
+          flex flex-row justify-evenly gap-[1rem] px-[1rem]
+          text-black">
+            <Button message="Client" href="/clients"/>
+            <Button message="Vehicle" href="/vehicles"/>
+            <Button message="Rental" href="/rentals"/>
+          </div>
+
+
         </div>
+
       </main>
-    </div>
+    </section>
   );
 }
