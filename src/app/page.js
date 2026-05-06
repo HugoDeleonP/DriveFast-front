@@ -5,10 +5,9 @@ import Button from "@/components/Button";
 export default function Home() {
   return (
     <section className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-[#1F1f1f] 
+      py-[2rem]
       gap-10">
-      
-      <NavBar/>
-      
+            
       <main className="flex flex-1 flex-col items-center gap-[5rem] sm:items-start">
         
         <div className="flex flex-col gap-[2rem]">
@@ -48,9 +47,9 @@ export default function Home() {
           <div className=" max-w-[50vw]
           flex flex-row justify-evenly gap-[1rem] px-[1rem]
           text-black">
-            <Button message="Client" href="/clients"/>
-            <Button message="Vehicle" href="/vehicles"/>
-            <Button message="Rental" href="/rentals"/>
+            <Button message="Clientes" href="/clients"/>
+            <Button message="Veículos" href="/vehicles"/>
+            <Button message="Locações" href="/rentals"/>
           </div>
 
 

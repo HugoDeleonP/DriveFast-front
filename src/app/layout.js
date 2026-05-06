@@ -1,6 +1,7 @@
 import { Noto_Sans } from "next/font/google";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/Navbar";
 
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
@@ -25,7 +26,10 @@ export default function RootLayout({ children }) {
       lang="pt-br"
       className={` ${notoSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavBar/>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,7 +1,8 @@
+"use server";
+
 import { revalidatePath } from "next/cache"
 import { API_URL, methodGet } from "./api"
-import { redirect } from "next/dist/server/api-utils"
-
+import { redirect } from "next/navigation";
 export async function save(clientData){
     const data = {
         name: clientData.get("name"),
@@ -24,5 +25,5 @@ export async function save(clientData){
 }
 
 export async function findAll(){
-    return methodGet("/clients")
+    return await methodGet("/clients")
 }

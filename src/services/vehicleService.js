@@ -1,3 +1,5 @@
+"use server";
+
 import { API_URL, methodGet } from "./api"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/dist/server/api-utils"
