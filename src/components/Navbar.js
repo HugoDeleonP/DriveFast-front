@@ -10,10 +10,11 @@ export default function NavBar(){
             <nav className="">
 
                 <ul className="text-black 
-                    flex flex-row justify-between gap-[2.5rem]">
-                    <li className=""><Link href="/clients">Client</Link></li>
-                    <li className=""><Link href="/vehicles">Vehicles</Link></li>
-                    <li className=""><Link href="/rentals">Rentals</Link></li>
+                    flex flex-row justify-between gap-[2.5rem]
+                    font-semibold ">
+                    <li className="hover:text-sky-700"><Link href="/clients">Client</Link></li>
+                    <li className="hover:text-sky-700"><Link href="/vehicles">Vehicles</Link></li>
+                    <li className="hover:text-sky-700"><Link href="/rentals">Rentals</Link></li>
                 </ul>
 
             </nav>
