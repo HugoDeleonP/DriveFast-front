@@ -9,8 +9,7 @@ export default function VehicleCard({data}){
             <h3>ID: <span className="text-sky-900 font-bold">{data.id}</span> </h3>
 
             <div className="flex flex-col ">
-                <h3>{data.model}</h3>
-                <p>{data.brand}</p>
+                <p>{data.brand} {data.model}</p>
                 <p>{data.licensePlate}</p>
                 <p>{data.available}</p>
                 <span>{data.diaryValue}</span>

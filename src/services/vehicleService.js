@@ -2,7 +2,7 @@
 
 import { API_URL, methodGet } from "./api"
 import { revalidatePath } from "next/cache"
-import { redirect } from "next/dist/server/api-utils"
+import { redirect } from "next/navigation";
 
 export async function save(vehicleData){
     const data = {
