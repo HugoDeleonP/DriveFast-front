@@ -1,3 +1,5 @@
+import priceConversorBRL from "@/services/utils/priceConversor";
+
 export default function RentalCard({data}){
     return (
         <div className="flex flex-col 
@@ -12,7 +14,7 @@ export default function RentalCard({data}){
                 <p>{data.clientName}</p>
                 <p>{data.vehicleModel}</p>
                 <p>{data.days} {data.days > 1 ? "dias" : "dia"}</p>
-                <span>{data.totalValue} R$</span>
+                <span>{priceConversorBRL(data.totalValue)} R$</span>
             </div>
             
         </div>

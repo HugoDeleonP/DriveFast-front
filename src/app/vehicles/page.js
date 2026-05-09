@@ -9,7 +9,7 @@ export default async function Vehicle(){
     
     return(
         <section className="flex flex-col items-center flex-1 w-[100%] bg-zinc-50 font-sans dark:bg-[#1F1f1f]
-        px-[18.75rem] py-[2rem] 
+        px-[3rem] py-[2rem] sm:px-[18.75rem] sm:py-[2rem] 
         gap-10">
             
             <div className="flex flex-col gap-12">

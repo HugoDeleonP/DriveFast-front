@@ -8,14 +8,14 @@ export default function Home() {
       py-[2rem]
       gap-10">
             
-      <main className="flex flex-1 flex-col items-center gap-[5rem] sm:items-start">
+      <main className="flex flex-1 flex-col items-center gap-[5rem] sm:items-start px-[0.5rem]">
         
         <div className="flex flex-col gap-[2rem]">
 
           <h2 className="text-[2rem] font-semibold
             ">Descrição</h2>
 
-          <div className="rounded-sm bg-white p-[2rem] max-w-[50vw]
+          <div className="rounded-sm bg-white p-[1.5rem] sm:max-w-[50vw]
           flex flex-col gap-[1rem]
           text-black">
             <p>
@@ -44,8 +44,8 @@ export default function Home() {
           <h2 className="text-[2rem] font-semibold
             ">Funcionalidades</h2>
 
-          <div className=" max-w-[50vw]
-          flex flex-row justify-evenly gap-[1rem] px-[1rem]
+          <div className=" 
+          flex flex-row justify-between sm:justify-evenly sm:gap-[1rem] sm:px-[1rem]
           text-black">
             <Button message="Clientes" href="/clients"/>
             <Button message="Veículos" href="/vehicles"/>
