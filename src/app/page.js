@@ -19,7 +19,7 @@ export default function Home() {
           flex flex-col gap-[1rem]
           text-black">
             <p>
-              DriveFast é uma aplicação front-end utilizando Next.js para
+              DriveFast é uma aplicação front-end que utiliza Next.js para
             consumir a API DriveFast, criada na atividade de backend.
             </p>
 
